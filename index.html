@@ -144,33 +144,6 @@
       text-shadow: 0 0 8px rgba(255, 211, 107, 0.7);
     }
 
-    /* Features Section */
-    .features {
-      text-align: center;
-      padding: 60px 20px;
-      background: #111;
-    }
-
-    .features h2 {
-      font-size: 2rem;
-      margin-bottom: 40px;
-      color: #ffd36b;
-    }
-
-    .feature-box {
-      background: #1c1c1c;
-      margin: 20px auto;
-      padding: 20px;
-      max-width: 500px;
-      border-radius: 15px;
-      box-shadow: 0 0 12px rgba(255, 211, 107, 0.2);
-    }
-
-    .feature-box h3 {
-      margin-bottom: 10px;
-      color: #ffd36b;
-    }
-
     /* Testimonials */
     .testimonials {
       text-align: center;
@@ -201,7 +174,6 @@
       color: #ffd36b;
     }
 
-    /* Star rating */
     .stars {
       color: #ffd36b;
       font-size: 1.2rem;
@@ -234,7 +206,6 @@
       <img src="logo.png" alt="Glow Haven Logo">
     </a>
     <nav>
-      <a href="#features">Features</a>
       <a href="#testimonials">Testimonials</a>
     </nav>
   </header>
@@ -255,36 +226,23 @@
     </div>
   </section>
 
-  <!-- Features -->
-  <section id="features" class="features">
-    <h2>✨ What You'll Discover</h2>
-    <div class="feature-box">
-      <h3>Luxury Routines</h3>
-      <p>Step-by-step skincare & haircare rituals designed for premium results.</p>
-    </div>
-    <div class="feature-box">
-      <h3>Pro Ingredients</h3>
-      <p>Spotlights on Vitamin C, Hyaluronic Acid, Botanical blends & more.</p>
-    </div>
-  </section>
-
   <!-- Testimonials -->
   <section id="testimonials" class="testimonials">
     <h2>🌟 Testimonials</h2>
     <div class="testimonial">
-      "Glow Haven transformed my skincare routine — I feel radiant every day!"
+      "Glow Haven made my skin so radiant, I feel confident every day!"
       <div class="stars">★★★★★</div>
       <span>– Ananya R.</span>
     </div>
     <div class="testimonial">
-      "The luxury rituals make me feel like I’m at a spa. Truly amazing!"
+      "The guide feels like a spa at home. Absolutely love it!"
       <div class="stars">★★★★★</div>
-      <span>– Priya S.</span>
+      <span>– Meera S.</span>
     </div>
     <div class="testimonial">
-      "I was hesitant at first, but my hair has never been this healthy!"
+      "Best purchase ever, my hair looks so healthy and shiny now."
       <div class="stars">★★★★★</div>
-      <span>– Meera K.</span>
+      <span>– Priya K.</span>
     </div>
   </section>
 
@@ -310,7 +268,7 @@
         if (time > 0) {
           time--;
         } else {
-          time = 2 * 60 * 60; // Reset timer
+          time = 2 * 60 * 60; // Reset timer when it hits 0
         }
       }
 
