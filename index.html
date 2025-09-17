@@ -94,13 +94,20 @@
 
     .price {
       margin-top: 12px;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
 
     .old-price {
       text-decoration: line-through;
       color: #888;
       margin-right: 8px;
+    }
+
+    .timer {
+      margin-top: 15px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #ffd36b;
     }
 
     /* Product Preview */
@@ -169,8 +176,9 @@
     <p>Your ultimate solution to glowing skin & healthy hair. Step-by-step premium routines designed for you.</p>
     <a href="#buy" class="btn-gold">Buy Now</a>
     <div class="price">
-      <span class="old-price">₹999</span> <span class="new-price">₹299</span>
+      <span class="old-price">₹499</span> <span class="new-price">₹49</span>
     </div>
+    <div class="timer" id="countdown">Offer ends in: 02:00:00</div>
   </section>
 
   <section class="product-preview">
@@ -202,5 +210,32 @@
   <footer>
     © 2025 Glow Haven. All rights reserved.
   </footer>
+
+  <script>
+    function startCountdown(duration, display) {
+      let timer = duration, hours, minutes, seconds;
+      setInterval(function () {
+        hours = parseInt(timer / 3600, 10);
+        minutes = parseInt((timer % 3600) / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = "Offer ends in: " + hours + ":" + minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          timer = duration; // restart countdown when finished
+        }
+      }, 1000);
+    }
+
+    window.onload = function () {
+      const twoHours = 60 * 60 * 2; // 2 hours in seconds
+      const display = document.querySelector('#countdown');
+      startCountdown(twoHours, display);
+    };
+  </script>
 </body>
 </html>
