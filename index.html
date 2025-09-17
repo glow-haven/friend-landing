@@ -100,202 +100,107 @@
     .old-price {
       text-decoration: line-through;
       color: #888;
-      margin-right: 10px;
+      margin-right: 8px;
     }
 
-    .new-price {
-      font-size: 1.6rem;
-      font-weight: 800;
-      background: linear-gradient(90deg,#ffd36b,#f1b028);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    /* Discount Tag */
-    .discount-tag {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 16px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: #111;
-      background: linear-gradient(90deg, #ff4e50, #f9d423);
-      border-radius: 25px;
-      animation: discountFlash 2s infinite;
-    }
-
-    @keyframes discountFlash {
-      0%, 100% { 
-        box-shadow: 0 0 12px rgba(255, 78, 80, 0.5), 0 0 20px rgba(249, 212, 35, 0.3);
-        transform: scale(1);
-      }
-      50% { 
-        box-shadow: 0 0 28px rgba(255, 78, 80, 0.9), 0 0 40px rgba(249, 212, 35, 0.6);
-        transform: scale(1.08);
-      }
-    }
-
-    /* Countdown Timer */
-    #countdown {
-      margin-top: 15px;
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #ffd36b;
-      text-shadow: 0 0 8px rgba(255, 211, 107, 0.7);
-    }
-
-    /* Product Image Section */
+    /* Product Preview */
     .product-preview {
       text-align: center;
-      padding: 40px 20px;
-      background: #1a1a1a;
+      margin: 60px 20px;
     }
 
     .product-preview img {
-      max-width: 90%;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255, 211, 107, 0.3);
+      max-width: 350px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(241,176,40,0.5), 0 0 40px rgba(241,176,40,0.3);
+      animation: glowPulse 3s infinite ease-in-out;
     }
 
     /* Testimonials */
     .testimonials {
-      text-align: center;
-      padding: 60px 20px;
       background: #111;
+      padding: 60px 20px;
+      text-align: center;
     }
 
     .testimonials h2 {
       font-size: 2rem;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       color: #ffd36b;
     }
 
     .testimonial {
-      background: #1a1a1a;
+      max-width: 600px;
       margin: 20px auto;
       padding: 20px;
-      max-width: 500px;
-      border-radius: 15px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.05);
       font-style: italic;
-      box-shadow: 0 0 12px rgba(255, 211, 107, 0.2);
     }
 
-    .testimonial span {
+    .testimonial strong {
       display: block;
       margin-top: 10px;
-      font-weight: bold;
       color: #ffd36b;
     }
 
-    .stars {
-      color: #ffd36b;
-      font-size: 1.2rem;
-      margin: 10px 0;
-    }
-
-    /* Footer */
     footer {
       text-align: center;
-      padding: 40px 20px;
+      padding: 30px;
       background: #000;
-      color: #ccc;
-    }
-
-    footer a {
-      color: #ffd36b;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
+      color: #777;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-
-  <!-- Header -->
   <header>
-    <a href="index.html">
-      <img src="logo.png" alt="Glow Haven Logo">
-    </a>
+    <img src="logo.png" alt="Glow Haven Logo">
     <nav>
-      <a href="#testimonials">Testimonials</a>
+      <a href="#hero">Home</a>
+      <a href="#buy">Buy Now</a>
+      <a href="#testimonials">Reviews</a>
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Glow With Confidence</h1>
-      <p>Your sanctuary for glowing skin & healthy hair. Step into luxury self-care.</p>
-      <div class="sale-badge">🔥 Limited Time Offer</div>
-      <a href="https://rzp.io/rzp/Anushya" class="btn-gold">Buy Now</a>
-      <div class="price">
-        <span class="old-price">₹499</span>
-        <span class="new-price">₹49</span>
-      </div>
-      <div class="discount-tag">🎉 Save 90% Today!</div>
-      <div id="countdown"></div>
+  <section class="hero" id="hero">
+    <span class="sale-badge">🔥 Limited Time Offer 🔥</span>
+    <h1>Glow Haven Skincare & Haircare Guide</h1>
+    <p>Your ultimate solution to glowing skin & healthy hair. Step-by-step premium routines designed for you.</p>
+    <a href="#buy" class="btn-gold">Buy Now</a>
+    <div class="price">
+      <span class="old-price">₹999</span> <span class="new-price">₹299</span>
     </div>
   </section>
 
-  <!-- Product Image -->
   <section class="product-preview">
-    <img src="product.jpg" alt="Glow Haven Skincare Guide">
+    <img src="IMG_20250917_224735_018.jpg" alt="Glow Haven Skincare Guide">
   </section>
 
-  <!-- Testimonials -->
-  <section id="testimonials" class="testimonials">
-    <h2>🌟 Testimonials</h2>
+  <section class="testimonials" id="testimonials">
+    <h2>What Our Customers Say</h2>
     <div class="testimonial">
-      "Glow Haven made my skin so radiant, I feel confident every day!"
-      <div class="stars">★★★★★</div>
-      <span>– Ananya R.</span>
+      "I saw visible changes in my skin within weeks. Absolutely love this guide!"  
+      <strong>- Ananya</strong>
     </div>
     <div class="testimonial">
-      "The guide feels like a spa at home. Absolutely love it!"
-      <div class="stars">★★★★★</div>
-      <span>– Meera S.</span>
+      "My hair feels stronger and shinier. Best purchase ever."  
+      <strong>- Priya</strong>
     </div>
     <div class="testimonial">
-      "Best purchase ever, my hair looks so healthy and shiny now."
-      <div class="stars">★★★★★</div>
-      <span>– Priya K.</span>
+      "The routines are simple and effective. Highly recommend Glow Haven!"  
+      <strong>- Kavya</strong>
     </div>
   </section>
 
-  <!-- Footer -->
+  <section class="hero" id="buy">
+    <h2>Get Instant Access Now</h2>
+    <p>Download your copy immediately after purchase and start your glow journey today!</p>
+    <a href="https://razorpay.com" class="btn-gold">Pay & Download PDF</a>
+  </section>
+
   <footer>
-    <p>Follow us on <a href="https://www.instagram.com/glowwithanushya?igsh=MTludzlsb2N5YWdzYw==" target="_blank">Instagram</a></p>
-    <p>© 2025 Glow Haven. All rights reserved.</p>
+    © 2025 Glow Haven. All rights reserved.
   </footer>
-
-  <!-- Countdown Script -->
-  <script>
-    function startCountdown() {
-      const countdownElement = document.getElementById("countdown");
-      let time = 2 * 60 * 60; // 2 hours in seconds
-
-      function updateCountdown() {
-        let hours = Math.floor(time / 3600);
-        let minutes = Math.floor((time % 3600) / 60);
-        let seconds = time % 60;
-
-        countdownElement.textContent = `⏳ Offer ends in ${hours}h ${minutes}m ${seconds}s`;
-
-        if (time > 0) {
-          time--;
-        } else {
-          time = 2 * 60 * 60; // Reset timer when it hits 0
-        }
-      }
-
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-    }
-
-    window.onload = startCountdown;
-  </script>
-
 </body>
 </html>
